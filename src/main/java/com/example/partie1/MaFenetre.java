@@ -98,7 +98,6 @@ public class MaFenetre extends Application {
         formulaire.add(passwd, 1, 2);
         formulaire.setVgap(10);
         formulaire.setHgap(10);
-
         form.getChildren().addAll(formulaire, buttonContainer);
 
         // HBox du centre de la fenêtre
