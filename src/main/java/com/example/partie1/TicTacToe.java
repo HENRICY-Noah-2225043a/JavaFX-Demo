@@ -29,9 +29,9 @@ public class TicTacToe extends Application {
             labelArray[i] = label;
             grille.add(label, i % 3, i / 3);
 
-            ImageView imageView = new ImageView(vide_img);
-            imageViewArray[i / 3][i % 3] = imageView;
-            grille.add(imageView, i % 3, i / 3);
+            ImageView vide = new ImageView(vide_img);
+            imageViewArray[i / 3][i % 3] = vide;
+            grille.add(vide, i % 3, i / 3);
         }
 
         for (int i = 0; i < 3; ++i) {
