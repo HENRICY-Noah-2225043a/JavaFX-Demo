@@ -23,7 +23,7 @@ public class Pendu extends Application {
     private int vies;
     private Label labelVies;
     private Label labelMotCache;
-    private TextField textFieldLettre;
+
     private Button[] boutonsLettres;
     private ImageView imageView;
 
@@ -52,13 +52,7 @@ public class Pendu extends Application {
         labelMotCache.setTextFill(Color.BLUE);
         labelMotCache.setWrapText(true);
 
-        textFieldLettre = new TextField();
-        textFieldLettre.setFont(new Font("Arial", 20));
-        textFieldLettre.setPrefSize(100, 20);
-        textFieldLettre.setOnAction(event -> {
-            jouer(textFieldLettre.getText().charAt(0));
-            textFieldLettre.clear();
-        });
+
 
         boutonsLettres = new Button[26];
         for (char c = 'a'; c <= 'z'; c++) {
@@ -80,7 +74,7 @@ public class Pendu extends Application {
         imageView.setPreserveRatio(true);
 
         VBox vBoxCenter = new VBox();
-        vBoxCenter.getChildren().addAll(labelVies, labelMotCache, textFieldLettre, hBox);
+        vBoxCenter.getChildren().addAll(labelVies, labelMotCache, hBox);
         vBoxCenter.setAlignment(Pos.CENTER);
 
         Button boutonRecommencer = new Button("Recommencer");
