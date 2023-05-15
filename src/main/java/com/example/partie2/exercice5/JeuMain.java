@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class JeuMain extends Application {
 
     private Scene scene;
-    private BorderPane root;
+
 
     static ArrayList<Obstacle> obstacles = new ArrayList<>();
 
@@ -24,7 +24,8 @@ public class JeuMain extends Application {
     @Override
     public void start(Stage primaryStage) {
 
-        root = new BorderPane();
+        BorderPane root = new BorderPane();
+
 
         //Acteurs du jeu
         Personnage pacman = new Pacman();
