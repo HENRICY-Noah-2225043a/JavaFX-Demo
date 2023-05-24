@@ -19,4 +19,9 @@ module com.example.javafxdemo {
 
     opens com.example.partie3.exercice8 to javafx.fxml;
     exports com.example.partie3.exercice8;
+
+    exports com.td2.exercice1;
+
+    opens com.example.exercice11 to javafx.fxml;
+    exports com.example.exercice11;
 }

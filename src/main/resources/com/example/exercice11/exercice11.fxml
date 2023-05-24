@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.ComboBox?>
+
+<BorderPane fx:controller="com.example.exercice11.Exercice11Controller" xmlns:fx="http://javafx.com/fxml">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+
+    <top>
+        <HBox alignment="TOP_RIGHT" spacing="10">
+            <children>
+                <VBox alignment="CENTER" spacing="5">
+                    <TextField fx:id="dateField" promptText="Date"/>
+                    <TextField fx:id="populationField" promptText="Population"/>
+                    <Button text="Ajouter" onAction="#addButtonClicked" style="-fx-background-color: #4CAF50; -fx-text-fill: white;">
+                        <effect>
+                            <DropShadow />
+                        </effect>
+                    </Button>
+                    <ComboBox fx:id="chartTypeSelector" onAction="#chartTypeSelected"/>
+                </VBox>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <BorderPane fx:id="chartContainer">
+            <center>
+                <BarChart fx:id="barChart" animated="true" styleClass="my-chart">
+                    <xAxis>
+                        <CategoryAxis label="Date" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Population" />
+                    </yAxis>
+                </BarChart>
+            </center>
+        </BorderPane>
+    </center>
+</BorderPane>
